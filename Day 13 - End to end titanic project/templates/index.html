@@ -1,0 +1,76 @@
+
+<!-- INheritence -->
+  
+  {% extends "layout.html" %}
+  {% block body %}
+
+  <div class="container">
+    <h2 class="text-center mt-3">Predict!🙂 What sorts of people were more likely to survive.</h2>
+
+    <form action="/predict" method="POST">
+
+
+
+      <div class="form-group">
+        <label for="pclass">Ticket class:</label>
+        <select class="form-control custom_select" name="pclass" id="pclass">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="sex">Sex:</label>
+        <select class="form-control custom_select" name="sex" id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="age">Enter the person's Age here:</label>
+        <input type="text" class="form-control" id="age" name="age">
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="fare">Enter the person's Fare here:</label>
+        <input type="text" class="form-control" id="fare" name="fare">
+      </div>
+
+
+
+       <div class="form-group">
+        <label for="embarked">Select the embarked:</label>
+        <select class="form-control custom_select" name="embarked" id="embarked">
+          <option value="C">Cherbourg</option>
+          <option value="S">Southampton</option>
+          <option value="Q">Queenstown</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="family_type">Select family size:</label>
+        <select class="form-control custom_select" name="family_type" id="family_type">
+          <option value="Medium">Medium</option>
+          <option value="Alone">Alone</option>
+          <option value="Large">Large</option>
+        </select>
+      </div>
+
+
+
+      <button class="btn btn-primary">Predict</button>
+    </form>
+  </div>
+
+
+ 
+
+  {% endblock %}
